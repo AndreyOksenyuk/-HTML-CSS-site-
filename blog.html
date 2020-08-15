@@ -4,20 +4,25 @@
 <head>
    <meta charset="UTF-8">
    <link rel="shortcut icon" href="/image/service/service4.png" type="image/png">
-   <title>Blog</title>
+   <title>Med Syte blog</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- <meta name="viewport" content="width=1200px"> -->
 
    <link rel="stylesheet" href="css/style.css">
    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@300;500;700&display=swap"
       rel="stylesheet">
+   <!-- JQuery UI-->
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
    <!-- анимация wow -->
-   <link rel="stylesheet" href="animateCss/animate.css">
-   <script src="wowAnimate/wow.min.js"></script>
+   <link rel="stylesheet" href="library/anime-min/animateCss/animate.css">
+   <script src="library/anime-min/wowAnimate/wow.min.js"></script>
    <!-- lightgallery -->
-   <link rel="stylesheet" href="galereya/css/lightgallery.min.css">
+   <link rel="stylesheet" href="library/galereya/css/lightgallery.min.css">
    <!-- anime.min -->
-   <script src="anime-min/anime-min.js"></script>
+   <script src="library/anime-min/anime-min.js"></script>
+
 </head>
 
 <body>
@@ -184,45 +189,21 @@
 
 
    </svg>
-   <!-- burger menu -->
-   <div class="burger-menu">
-      <div class="burger-menu__button" onclick="burgerMenu()">
-         <img src="./image/logo.png" alt="" class="burger-logo">
-         <button class="burger-menu__button-line"></button>
-         <div class="HeaderFixed">
-            <nav class="nav__nav">
-               <p class="nav__link home_nav3">&#9650 Up</p>
-               <a href="index.html" style="text-decoration: none;"><p class="nav__link">Home</p></a> 
-               <p class="nav__link contactUs_nav3">Contact us</p>
-               <p class="nav__link about_nav3"></p>
-               <p class="nav__link service_nav3"></p>
-               <p class="nav__link blog_nav3"></p>
-               <p class="nav__link gallery_nav3"></p> 
-            </nav>
-            <div class="burger-menu__contacts">
-               <h5 class="burger-menu__contacts__namber">CALL US<br><a href="+123 4567 8900"> +123 4567 8900</a></h5>
-               <hr>
-               <h5 class="burger-menu__contacts__time">WORK TIME: 09:00 - 17:00 <br>Saturday and Sunday - CLOSED
-               </h5>
-               <hr>
-               <h5 class="burger-menu__contacts__mail">MAIL US<br><a href="#">med@psd.in.ua</a></h5>
-               <hr>
-            </div>
-         </div>
+   <!-- Burger menu -->
+   <nav class="mobile-menu">
+      <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
+      <label for="checkbox" class="mobile-menu__btn">
+         <div class="mobile-menu__icon"></div>
+      </label>
+      <div class="mobile-menu__container">
+         <ul class="mobile-menu__list">
+            <a href="#intro">Home</a>
+            <p class="nav__link home_nav" data-toScroll='header'>Up</p>
+            <p class="nav__link contactUs_nav" data-toScroll='footer'>Contact us</p>
+         </ul>
       </div>
-   </div>
+   </nav>
 
-   <!-- header fixed -->
-   <div class="HeaderFixed fix-head">
-      <nav class="nav__nav"> 
-         <p class="nav__link about_nav2"></p>
-         <p class="nav__link service_nav2"></p>
-         <p class="nav__link home_nav2">&#9650 Up</p>
-         <p class="nav__link contactUs_nav2">Contact us</p>
-         <p class="nav__link blog_nav2"></p>
-         <p class="nav__link gallery_nav2"></p>         
-      </nav>
-   </div>
 
    <!--  header -->
    <div class="container">
@@ -263,14 +244,10 @@
          </div>
 
          <div class="header__bottom --header_blog">
-
-            <nav class="nav__nav">
-               <a href="index.html" class="nav__link home_nav"><p>Home</p></a>
-               <p class="nav__link contactUs_nav">Contact us</p>
-               <p class="nav__link about_nav"></p>
-               <p class="nav__link service_nav"></p>
-               <p class="nav__link gallery_nav"></p>
-               <p class="nav__link blog_nav"></p>    
+            <nav class="nav__nav" style="width: 300px">
+               <a href="/">&#9668; Home</a>
+               <p class="nav__link home_nav" data-toScroll='header'>Up &#9650;</p>
+               <p class="nav__link contactUs_nav" data-toScroll='footer'>Contact us</p>
             </nav>
 
             <div class="nav__social">
@@ -303,218 +280,305 @@
                   </a>
                </div>
             </div>
-         </div>   
-      </header> 
+         </div>
+      </header>
    </div>
 
-      <!-- Text Area -->
-      <div class="container" id="blog">
-         <h1 class="article__title --title-blog">How we works</h1>
-               <p class="title__text-blog --text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint repellat dolores, nulla possimus impedit ipsa obcaecati fugiat, consequatur quae consequuntur soluta magni, mollitia voluptatem. Sapiente dignissimos error aliquid dolores!
-               Tempore quas reprllitia, nulla ratione laudantium molestiae quidem possimus! Esse, inventore. Numquam voluptate, ipsum eos quidem deleniti debitis amet ea esse magnam ex vel labore.
-               Quos totam, optio alias voluptas id modi natus eveniet deserunt, autem nostrum adipisci. Reprehenderit in numquam qui error sint, doloribus unde nam deserunt harum nulla ratione, porro minus consequuntur necessitatibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos impedit facilis fugit quam minus atque quibusdam? Voluptas, labore officia? Nam, fuga nisi tempora ducimus sed commodi non nesciunt aliquid libero.</p>
-         <div class="TextArea-blog">
-            <article class="article__area-blog">
-               
-               <section class="section__area1-blog">
-                  <img src="image/Text_Area/section1.png" alt="" class="section__img">
-                  <h4 class="section__title">Lorem ipsum dolor sit amet,</h4>
+   <!-- Text Area -->
+   <div class="container" id="blog">
+      <h1 class="article__title --title-blog">How we works</h1>
+      <p class="title__text-blog --text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint repellat
+         dolores, nulla possimus impedit ipsa obcaecati fugiat, consequatur quae consequuntur soluta magni, mollitia
+         voluptatem. Sapiente dignissimos error aliquid dolores!
+         Tempore quas reprllitia, nulla ratione laudantium molestiae quidem possimus! Esse, inventore. Numquam
+         voluptate, ipsum eos quidem deleniti debitis amet ea esse magnam ex vel labore.
+         Quos totam, optio alias voluptas id modi natus eveniet deserunt, autem nostrum adipisci. Reprehenderit in
+         numquam qui error sint, doloribus unde nam deserunt harum nulla ratione, porro minus consequuntur
+         necessitatibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos impedit facilis fugit quam minus
+         atque quibusdam? Voluptas, labore officia? Nam, fuga nisi tempora ducimus sed commodi non nesciunt aliquid
+         libero.</p>
+      <div class="TextArea-blog">
+         <article class="article__area-blog">
 
-                  <h5 class="section__dataName">April 19, 2017 | Dr. Jon Doe</h5>
-                  <p class="section__text-blog --text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam impedit voluptas quisquam recusandae quos tempore, molestiae iste vel, dolore nisi nulla, repudiandae corrupti quaerat ut ad! Inventore dolorem blanditiis atque.
-                  Dolor, nihil suscipit illo officiis nesciunt recusandae odit molestias blanditiis expedita perspiciatis obcaecati consequuntur soluta natus magnam amet quisquam aliquid autem, explicabo incidunt? Eaque saepe expedita nobis voluptatibus fuga modi?
-                  Ut sit quae incidunt id illo! Quae aspernatur alias hic numquam dolorum eum placeat nisi maxime delectus doloribus doloremque, dignissimos voluptatem nulla tempore ducimus praesentium voluptates quos accusamus exercitationem est?
-                  Aliquam possimus rerum autem dolorum aperiam enim sit eos et assumenda quas molestias tempora earum minima quasi, est maxime repellendus eligendi itaque labore a consectetur consequuntur laboriosam. Nostrum, asperiores enim?
-                  Totam cupiditate eaque pariatur, deserunt illum nemo consequatur fugiat minima nobis optio harum et a saepe quo eveniet atque tempore hic. Neque dignissimos nesciunt quis corrupti deleniti animi recusandae eius?
-                  Delectus iste expedita, nihil perspiciatis eligendi sapiente officiis rerum quae magni ullam tenetur accusantium aspernatur repudiandae dolorem dolores consequatur architecto ipsam non pariatur iure odit nobis, magnam, suscipit voluptatibus. Vero.
-                  Dolorum consectetur quae consequatur delectus, qui optio fugit! Alias officiis delectus voluptatum dolore et excepturi quia modi fugiat, aliquid perferendis a facere? Blanditiis, a dolores adipisci itaque pariatur impedit veniam!
-                  Recusandae aliquam eligendi ea architecto. Cumque laborum dolor iure necessitatibus dolores fuga quia ullam exercitationem similique excepturi neque, corrupti sapiente, accusamus esse debitis asperiores illum sed. Enim esse dolorum consectetur?
-                  Accusamus ipsum voluptas odit omnis? Omnis ad harum quo aliquid inventore, rerum provident commodi dolorem, aspernatur minima et necessitatibus fuga magnam libero officia at illum? Alias qui laudantium suscipit adipisci!
-                  Natus magni accusamus illo incidunt excepturi officia, minus asperiores itaque maiores ea eligendi at. Cum inventore unde tenetur delectus, voluptate sit quidem, suscipit ad ullam quia, obcaecati vitae fugiat odio.
-                  Facere, et iste aut asperiores nisi porro similique recusandae! Eos totam ipsa rem, architecto debitis assumenda amet accusamus consectetur aliquam voluptatibus accusantium atque porro rerum a vero. Ullam, eveniet quis!
-                  Est nesciunt deleniti, quam ad tenetur neque nisi officia quae blanditiis repellat sit at magni soluta dolores, voluptate perspiciatis suscipit alias sapiente unde iste porro vitae officiis. Temporibus, voluptatibus magni!
-                  Iure minima eum repellendus quasi porro fugit eveniet hic quis doloremque reiciendis ducimus maiores commodi, doloribus magnam quos facere. Expedita, cumque ullam quia autem dolores minus aperiam eum omnis voluptatibus?
-                  Adipisci voluptatem eligendi provident a ducimus architecto dolores ipsa debitis nobis cupiditate magni, ullam, modi atque nihil harum aut laboriosam sit saepe quas! Amet itaque cum beatae, maiores neque earum.
-                  Corrupti modi neque cupiditate quae et. Beatae quam nam temporibus magnam maiores atque perspiciatis, dignissimos deleniti. Non mollitia, recusandae quidem odit nobis consequuntur ipsam dolorum incidunt a repudiandae culpa laborum.
-                  Inventore eveniet aperiam non nostrum animi dicta aut rem, neque, natus molestiae vero repudiandae odio magnam illum dolorum possimus deleniti. Reprehenderit libero quod adipisci et vitae aperiam rerum maiores rem.
-                  Odio, quidem similique atque accusantium impedit nobis unde sint nam consequuntur assumenda nemo neque qui voluptatum harum quam fuga, illum iusto doloribus, vel eius aut voluptate fugiat architecto. Itaque, vero.
-                  Ipsum est, explicabo reiciendis aut dolorem iusto in distinctio. Possimus unde distinctio modi harum repudiandae quia, voluptate pariatur quasi nemo necessitatibus perspiciatis vitae id! Facere ex minus quos veritatis alias!
-                  Nisi accusamus optio quam debitis dolore possimus esse tenetur consectetur accusantium nemo distinctio voluptatum expedita, voluptates autem voluptatibus delectus natus at, incidunt minus molestias. Et explicabo dolorem labore quasi excepturi?
-                  Tempora voluptatum sapiente tenetur eum, consequatur voluptatem blanditiis et facilis nam atque minus explicabo asperiores voluptatibus odit praesentium ratione veniam officia optio! Earum velit ipsam sunt soluta iste. Veniam, libero.</p>
-                  <hr>
-               </section>
+            <section class="section__area1-blog">
+               <img src="image/Text_Area/section1.png" alt="" class="section__img">
+               <h4 class="section__title">Lorem ipsum dolor sit amet,</h4>
 
-               <section class="section__area2-blog">
-                  <img src="image/Text_Area/section2.png" alt="" class="section__img">
-                  <h4 class="section__title">Lorem ipsum dolor sit amet, </h4>
-                  <h5 class="section__dataName">April 19, 2017 | Dr. Jon Doe</h5>
-                  <p class="section__text-blog --text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius iste eligendi ipsum, voluptatibus voluptatem a repellendus amet reprehenderit, quasi quisquam fugiat molestiae dolorum debitis eos eaque at dolorem voluptates aut!
-                  Vitae cupiditate vel sit ratione obcaecati maiores totam suscipit nulla enim deleniti dolorum officia accusamus temporibus quaerat fugiat consectetur voluptate nemo corrupti, reiciendis omnis debitis, autem, doloribus corporis! Ea, quisquam.
-                  Placeat exercitationem, sapiente natus assumenda debitis tempora veniam quidem ducimus nam! Omnis consequatur voluptate doloribus saepe sunt. Tempora optio, assumenda totam commodi adipisci modi corrupti ab molestiae minus esse consequatur.
-                  Excepturi nesciunt fuga vitae doloremque, accusamus sit consequuntur necessitatibus cupiditate minus tempora quaerat quas laboriosam! Earum ipsum voluptatibus aliquam nam pariatur quo debitis esse ratione itaque minus natus, velit reprehenderit?
-                  Sint mollitia sed soluta modi minima quisquam dolorum id, nam dignissimos tempora quis explicabo optio quod ipsa! Delectus quidem blanditiis debitis odio illo. Maxime tempore maiores repellendus assumenda numquam culpa.
-                  Placeat dolorum minus fugit tempore magnam laboriosam reiciendis aspernatur ex in ab, excepturi rem quod esse? Dolore similique harum voluptates omnis beatae veritatis tenetur, non vero, aliquam reprehenderit molestias animi!
-                  Ipsa nihil tempora accusantium fuga autem aperiam impedit deleniti obcaecati ab natus sequi totam rem quae dolorum eligendi reiciendis optio odit, provident quibusdam a maiores? Rerum dolorum quisquam saepe enim!
-                  Optio ex quam nulla fugiat minima laudantium doloribus reiciendis delectus quibusdam quod pariatur mollitia eligendi quos minus, recusandae atque aliquid. Modi perferendis nulla aut inventore est aliquid, consequuntur itaque ipsum.
-                  Unde illum autem non quod eveniet corrupti at sapiente fuga quae quam odit iusto, vero, voluptates laudantium dignissimos, ipsum ipsam quos exercitationem! Animi hic tenetur unde totam molestiae ratione eligendi.
-                  Dolores facere officiis debitis rem! Amet, officiis vero blanditiis nulla qui neque corporis dolorem dignissimos dicta consectetur asperiores aperiam dolore odit, impedit in ut rem unde doloribus sint, velit cupiditate.
-                  Est, quisquam dicta. Facere minima eum reprehenderit ex, voluptatibus saepe adipisci. Nihil, doloremque ipsam culpa eius cupiditate dolore perspiciatis iure repudiandae amet sit porro voluptatum at quidem facere odit cum!
-                  Pariatur illum voluptatum obcaecati esse dolor unde nemo tenetur, deserunt aspernatur modi recusandae laboriosam veritatis incidunt, odio, delectus numquam. Doloribus atque adipisci dicta fugiat perspiciatis qui, repellat obcaecati labore placeat!
-                  Doloremque quisquam repellat quae deleniti id laudantium eaque ratione sapiente, nulla deserunt autem officia asperiores soluta iure voluptatum officiis culpa obcaecati sit cupiditate, unde sint? Officiis aliquam rem enim hic!
-                  Accusamus, optio esse. Unde ipsam totam id, numquam optio ea magnam tempora sequi rem aliquid nulla blanditiis aperiam quod perspiciatis reiciendis vel quas laborum, modi ut nemo. Pariatur, similique sit.
-                  Veritatis culpa ad asperiores quod ratione non ut corporis, magnam reprehenderit doloribus provident corrupti maiores, nemo eaque quas? Numquam quod quo quia libero impedit esse minima beatae veniam nulla? Quas.
-                  Laborum rem velit, aliquid ipsam id illum facilis incidunt ex eos maiores iure. Sunt temporibus, officia asperiores veniam aliquid explicabo modi atque? Provident architecto optio temporibus dolorem consequuntur quo sequi.
-                  Expedita non quae necessitatibus adipisci blanditiis cupiditate! Itaque iure sed nostrum odio, quo dignissimos a nemo quod aut corporis quis dolore, dolorum vitae ipsum fugiat, ipsa dolorem. Sapiente, amet harum!
-                  Odit ipsum pariatur quasi. Dignissimos accusantium, expedita tempore, minus necessitatibus error aut deleniti voluptatibus quae illo consequatur perferendis voluptates, libero laboriosam! Quam similique odit odio tempore nihil consequatur ad facilis.
-                  Fugit adipisci quod ab libero exercitationem asperiores aspernatur itaque cum natus. Incidunt, laborum est. Consequatur, nulla earum quidem itaque eum sequi pariatur dolorem reprehenderit unde, sunt placeat nobis similique? Inventore.
-                  Modi porro earum, velit quibusdam dolorum sequi sapiente debitis magnam nostrum dolores quaerat, ea voluptatum! Fugit, perferendis repudiandae odio nostrum dignissimos maxime? Iste ea eveniet blanditiis reprehenderit ab omnis? Vel!Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                     accusantium doloremque laudantium.</p><hr>
-               </section>
+               <h5 class="section__dataName">April 19, 2017 | Dr. Jon Doe</h5>
+               <p class="section__text-blog --text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                  impedit voluptas quisquam recusandae quos tempore, molestiae iste vel, dolore nisi nulla, repudiandae
+                  corrupti quaerat ut ad! Inventore dolorem blanditiis atque.
+                  Dolor, nihil suscipit illo officiis nesciunt recusandae odit molestias blanditiis expedita
+                  perspiciatis obcaecati consequuntur soluta natus magnam amet quisquam aliquid autem, explicabo
+                  incidunt? Eaque saepe expedita nobis voluptatibus fuga modi?
+                  Ut sit quae incidunt id illo! Quae aspernatur alias hic numquam dolorum eum placeat nisi maxime
+                  delectus doloribus doloremque, dignissimos voluptatem nulla tempore ducimus praesentium voluptates
+                  quos accusamus exercitationem est?
+                  Aliquam possimus rerum autem dolorum aperiam enim sit eos et assumenda quas molestias tempora earum
+                  minima quasi, est maxime repellendus eligendi itaque labore a consectetur consequuntur laboriosam.
+                  Nostrum, asperiores enim?
+                  Totam cupiditate eaque pariatur, deserunt illum nemo consequatur fugiat minima nobis optio harum et a
+                  saepe quo eveniet atque tempore hic. Neque dignissimos nesciunt quis corrupti deleniti animi
+                  recusandae eius?
+                  Delectus iste expedita, nihil perspiciatis eligendi sapiente officiis rerum quae magni ullam tenetur
+                  accusantium aspernatur repudiandae dolorem dolores consequatur architecto ipsam non pariatur iure odit
+                  nobis, magnam, suscipit voluptatibus. Vero.
+                  Dolorum consectetur quae consequatur delectus, qui optio fugit! Alias officiis delectus voluptatum
+                  dolore et excepturi quia modi fugiat, aliquid perferendis a facere? Blanditiis, a dolores adipisci
+                  itaque pariatur impedit veniam!
+                  Recusandae aliquam eligendi ea architecto. Cumque laborum dolor iure necessitatibus dolores fuga quia
+                  ullam exercitationem similique excepturi neque, corrupti sapiente, accusamus esse debitis asperiores
+                  illum sed. Enim esse dolorum consectetur?
+                  Accusamus ipsum voluptas odit omnis? Omnis ad harum quo aliquid inventore, rerum provident commodi
+                  dolorem, aspernatur minima et necessitatibus fuga magnam libero officia at illum? Alias qui laudantium
+                  suscipit adipisci!
+                  Natus magni accusamus illo incidunt excepturi officia, minus asperiores itaque maiores ea eligendi at.
+                  Cum inventore unde tenetur delectus, voluptate sit quidem, suscipit ad ullam quia, obcaecati vitae
+                  fugiat odio.
+                  Facere, et iste aut asperiores nisi porro similique recusandae! Eos totam ipsa rem, architecto debitis
+                  assumenda amet accusamus consectetur aliquam voluptatibus accusantium atque porro rerum a vero. Ullam,
+                  eveniet quis!
+                  Est nesciunt deleniti, quam ad tenetur neque nisi officia quae blanditiis repellat sit at magni soluta
+                  dolores, voluptate perspiciatis suscipit alias sapiente unde iste porro vitae officiis. Temporibus,
+                  voluptatibus magni!
+                  Iure minima eum repellendus quasi porro fugit eveniet hic quis doloremque reiciendis ducimus maiores
+                  commodi, doloribus magnam quos facere. Expedita, cumque ullam quia autem dolores minus aperiam eum
+                  omnis voluptatibus?
+                  Adipisci voluptatem eligendi provident a ducimus architecto dolores ipsa debitis nobis cupiditate
+                  magni, ullam, modi atque nihil harum aut laboriosam sit saepe quas! Amet itaque cum beatae, maiores
+                  neque earum.
+                  Corrupti modi neque cupiditate quae et. Beatae quam nam temporibus magnam maiores atque perspiciatis,
+                  dignissimos deleniti. Non mollitia, recusandae quidem odit nobis consequuntur ipsam dolorum incidunt a
+                  repudiandae culpa laborum.
+                  Inventore eveniet aperiam non nostrum animi dicta aut rem, neque, natus molestiae vero repudiandae
+                  odio magnam illum dolorum possimus deleniti. Reprehenderit libero quod adipisci et vitae aperiam rerum
+                  maiores rem.
+                  Odio, quidem similique atque accusantium impedit nobis unde sint nam consequuntur assumenda nemo neque
+                  qui voluptatum harum quam fuga, illum iusto doloribus, vel eius aut voluptate fugiat architecto.
+                  Itaque, vero.
+                  Ipsum est, explicabo reiciendis aut dolorem iusto in distinctio. Possimus unde distinctio modi harum
+                  repudiandae quia, voluptate pariatur quasi nemo necessitatibus perspiciatis vitae id! Facere ex minus
+                  quos veritatis alias!
+                  Nisi accusamus optio quam debitis dolore possimus esse tenetur consectetur accusantium nemo distinctio
+                  voluptatum expedita, voluptates autem voluptatibus delectus natus at, incidunt minus molestias. Et
+                  explicabo dolorem labore quasi excepturi?
+                  Tempora voluptatum sapiente tenetur eum, consequatur voluptatem blanditiis et facilis nam atque minus
+                  explicabo asperiores voluptatibus odit praesentium ratione veniam officia optio! Earum velit ipsam
+                  sunt soluta iste. Veniam, libero.</p>
+               <hr>
+            </section>
 
-            </article>
+            <section class="section__area2-blog">
+               <img src="image/Text_Area/section2.png" alt="" class="section__img">
+               <h4 class="section__title">Lorem ipsum dolor sit amet, </h4>
+               <h5 class="section__dataName">April 19, 2017 | Dr. Jon Doe</h5>
+               <p class="section__text-blog --text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius iste
+                  eligendi ipsum, voluptatibus voluptatem a repellendus amet reprehenderit, quasi quisquam fugiat
+                  molestiae dolorum debitis eos eaque at dolorem voluptates aut!
+                  Vitae cupiditate vel sit ratione obcaecati maiores totam suscipit nulla enim deleniti dolorum officia
+                  accusamus temporibus quaerat fugiat consectetur voluptate nemo corrupti, reiciendis omnis debitis,
+                  autem, doloribus corporis! Ea, quisquam.
+                  Placeat exercitationem, sapiente natus assumenda debitis tempora veniam quidem ducimus nam! Omnis
+                  consequatur voluptate doloribus saepe sunt. Tempora optio, assumenda totam commodi adipisci modi
+                  corrupti ab molestiae minus esse consequatur.
+                  Excepturi nesciunt fuga vitae doloremque, accusamus sit consequuntur necessitatibus cupiditate minus
+                  tempora quaerat quas laboriosam! Earum ipsum voluptatibus aliquam nam pariatur quo debitis esse
+                  ratione itaque minus natus, velit reprehenderit?
+                  Sint mollitia sed soluta modi minima quisquam dolorum id, nam dignissimos tempora quis explicabo optio
+                  quod ipsa! Delectus quidem blanditiis debitis odio illo. Maxime tempore maiores repellendus assumenda
+                  numquam culpa.
+                  Placeat dolorum minus fugit tempore magnam laboriosam reiciendis aspernatur ex in ab, excepturi rem
+                  quod esse? Dolore similique harum voluptates omnis beatae veritatis tenetur, non vero, aliquam
+                  reprehenderit molestias animi!
+                  Ipsa nihil tempora accusantium fuga autem aperiam impedit deleniti obcaecati ab natus sequi totam rem
+                  quae dolorum eligendi reiciendis optio odit, provident quibusdam a maiores? Rerum dolorum quisquam
+                  saepe enim!
+                  Optio ex quam nulla fugiat minima laudantium doloribus reiciendis delectus quibusdam quod pariatur
+                  mollitia eligendi quos minus, recusandae atque aliquid. Modi perferendis nulla aut inventore est
+                  aliquid, consequuntur itaque ipsum.
+                  Unde illum autem non quod eveniet corrupti at sapiente fuga quae quam odit iusto, vero, voluptates
+                  laudantium dignissimos, ipsum ipsam quos exercitationem! Animi hic tenetur unde totam molestiae
+                  ratione eligendi.
+                  Dolores facere officiis debitis rem! Amet, officiis vero blanditiis nulla qui neque corporis dolorem
+                  dignissimos dicta consectetur asperiores aperiam dolore odit, impedit in ut rem unde doloribus sint,
+                  velit cupiditate.
+                  Est, quisquam dicta. Facere minima eum reprehenderit ex, voluptatibus saepe adipisci. Nihil,
+                  doloremque ipsam culpa eius cupiditate dolore perspiciatis iure repudiandae amet sit porro voluptatum
+                  at quidem facere odit cum!
+                  Pariatur illum voluptatum obcaecati esse dolor unde nemo tenetur, deserunt aspernatur modi recusandae
+                  laboriosam veritatis incidunt, odio, delectus numquam. Doloribus atque adipisci dicta fugiat
+                  perspiciatis qui, repellat obcaecati labore placeat!
+                  Doloremque quisquam repellat quae deleniti id laudantium eaque ratione sapiente, nulla deserunt autem
+                  officia asperiores soluta iure voluptatum officiis culpa obcaecati sit cupiditate, unde sint? Officiis
+                  aliquam rem enim hic!
+                  Accusamus, optio esse. Unde ipsam totam id, numquam optio ea magnam tempora sequi rem aliquid nulla
+                  blanditiis aperiam quod perspiciatis reiciendis vel quas laborum, modi ut nemo. Pariatur, similique
+                  sit.
+                  Veritatis culpa ad asperiores quod ratione non ut corporis, magnam reprehenderit doloribus provident
+                  corrupti maiores, nemo eaque quas? Numquam quod quo quia libero impedit esse minima beatae veniam
+                  nulla? Quas.
+                  Laborum rem velit, aliquid ipsam id illum facilis incidunt ex eos maiores iure. Sunt temporibus,
+                  officia asperiores veniam aliquid explicabo modi atque? Provident architecto optio temporibus dolorem
+                  consequuntur quo sequi.
+                  Expedita non quae necessitatibus adipisci blanditiis cupiditate! Itaque iure sed nostrum odio, quo
+                  dignissimos a nemo quod aut corporis quis dolore, dolorum vitae ipsum fugiat, ipsa dolorem. Sapiente,
+                  amet harum!
+                  Odit ipsum pariatur quasi. Dignissimos accusantium, expedita tempore, minus necessitatibus error aut
+                  deleniti voluptatibus quae illo consequatur perferendis voluptates, libero laboriosam! Quam similique
+                  odit odio tempore nihil consequatur ad facilis.
+                  Fugit adipisci quod ab libero exercitationem asperiores aspernatur itaque cum natus. Incidunt, laborum
+                  est. Consequatur, nulla earum quidem itaque eum sequi pariatur dolorem reprehenderit unde, sunt
+                  placeat nobis similique? Inventore.
+                  Modi porro earum, velit quibusdam dolorum sequi sapiente debitis magnam nostrum dolores quaerat, ea
+                  voluptatum! Fugit, perferendis repudiandae odio nostrum dignissimos maxime? Iste ea eveniet blanditiis
+                  reprehenderit ab omnis? Vel!Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium.</p>
+               <hr>
+            </section>
+
+         </article>
+      </div>
+   </div>
+
+   <!--  Footer -->
+   <footer id="footer">
+      <div class="container">
+         <div class="fooret__inner">
+            <div class="footer__block1">
+               <div class="footer__block_title">Get in Touch</div>
+               <div class="footer__block_inner">
+                  <div class="block__min_inner">
+                     <a class="block__inner_svg" href="#" target="_blank">
+                        <svg class="footer_svg">
+                           <use xlink:href="#letter_ico"></use>
+                        </svg>
+                     </a>
+                     <div class="block__inner_text">
+                        <a href="">free@psd.in.ua</a>
+                        <a href="">free@psd.in.ua</a>
+                     </div>
+                  </div>
+
+                  <div class="block__min_inner">
+                     <a class="block__inner_svg" href="#" target="_blank">
+                        <svg class="footer_svg">
+                           <use xlink:href="#phone_ico"></use>
+                        </svg>
+                     </a>
+                     <div class="block__inner_text">
+                        <a href="">+123 456 7890 </a>
+                        <a href="">+123 456 7890</a>
+                     </div>
+                  </div>
+
+                  <div class="block__min_inner">
+                     <a class="block__inner_svg" href="#" target="_blank">
+                        <svg class="footer_svg">
+                           <use xlink:href="#map_ico"></use>
+                        </svg>
+                     </a>
+                     <div class="block__inner_text">
+                        <a href="">123, Main Road, New City, My Country 123456</a>
+
+                     </div>
+                  </div>
+
+                  <div class="block__min_inner">
+
+                     <div class="footer__social">
+                        <a class="social__item" href="#" target="_blank">
+                           <svg class="social__icon">
+                              <use xlink:href="#facebook"></use>
+                           </svg>
+                        </a>
+                        <a class="social__item" href="#" target="_blank">
+                           <svg class="social__icon">
+                              <use xlink:href="#google"></use>
+                           </svg>
+                        </a>
+
+                        <a class="social__item" href="#" target="_blank">
+                           <svg class="social__icon">
+                              <use xlink:href="#vk"></use>
+                           </svg>
+                        </a>
+                        <a class="social__item" href="#" target="_blank">
+                           <svg class="social__icon">
+                              <use xlink:href="#youtube"></use>
+                           </svg>
+                        </a>
+                        <a class="social__item" href="#" target="_blank">
+                           <svg class="social__icon">
+                              <use xlink:href="#linkedin"></use>
+                           </svg>
+                        </a>
+
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+
+            <div class="footer__block2">
+               <div class="footer__block_title">Quick Links</div>
+               <div class="footer__block_inner">
+                  <ul>
+                     <li><a href="#">About us</a></li>
+                     <li><a href="#">Blog</a></li>
+                     <li><a href="#">Contact us</a></li>
+                     <li><a href="#">Faq</a></li>
+                     <li><a href="#">Insurance</a></li>
+                     <li><a href="#">Contact us</a></li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="footer__block3">
+               <div class="footer__block_title">Our Services</div>
+               <div class="footer__block_inner">
+                  <div class="footer__block_inner">
+                     <ul>
+                        <li><a href="#">Work Injuries</a></li>
+                        <li><a href="#">Sport Injuries</a></li>
+                        <li><a href="#">Cold Laser</a></li>
+                        <li><a href="#">Therapy</a></li>
+                        <li><a href="#">Massage Ther</a></li>
+                        <li><a href="#">Chiropratic Therapi</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+            <!-- form -->
+            <div class="footer__block4">
+               <div class="footer__block_title">Enquiry Form</div>
+               <div class="footer__block_inner">
+                  <form>
+                     <input name="username" type="text" placeholder="Name" class="form --form__name">
+                     <input name="userphone" type="tel" placeholder="Phone" class="form --form__tel">
+                     <textarea name="usermessage" maxlength="1000" placeholder="Message"
+                        class="form --form__message"></textarea>
+                     <input type="submit" class="footer__btn" value="SUBMIT">
+                  </form>
+               </div>
+            </div>
+
          </div>
       </div>
+   </footer>
 
-  <!--  Footer -->
-  <footer id="footer">
-     <div class="container">
-        <div class="fooret__inner">
-           <div class="footer__block1">
-              <div class="footer__block_title">Get in Touch</div>
-              <div class="footer__block_inner">
-                 <div class="block__min_inner">
-                    <a class="block__inner_svg" href="#" target="_blank">
-                       <svg class="footer_svg">
-                          <use xlink:href="#letter_ico"></use>
-                       </svg>
-                    </a>
-                    <div class="block__inner_text">
-                       <a href="">free@psd.in.ua</a>
-                       <a href="">free@psd.in.ua</a>
-                    </div>
-                 </div>
-
-                 <div class="block__min_inner">
-                    <a class="block__inner_svg" href="#" target="_blank">
-                       <svg class="footer_svg">
-                          <use xlink:href="#phone_ico"></use>
-                       </svg>
-                    </a>
-                    <div class="block__inner_text">
-                       <a href="">+123 456 7890 </a>
-                       <a href="">+123 456 7890</a>
-                    </div>
-                 </div>
-
-                 <div class="block__min_inner">
-                    <a class="block__inner_svg" href="#" target="_blank">
-                       <svg class="footer_svg">
-                          <use xlink:href="#map_ico"></use>
-                       </svg>
-                    </a>
-                    <div class="block__inner_text">
-                       <a href="">123, Main Road, New City, My Country 123456</a>
-
-                    </div>
-                 </div>
-
-                 <div class="block__min_inner">
-
-                    <div class="footer__social">
-                       <a class="social__item" href="#" target="_blank">
-                          <svg class="social__icon">
-                             <use xlink:href="#facebook"></use>
-                          </svg>
-                       </a>
-                       <a class="social__item" href="#" target="_blank">
-                          <svg class="social__icon">
-                             <use xlink:href="#google"></use>
-                          </svg>
-                       </a>
-
-                       <a class="social__item" href="#" target="_blank">
-                          <svg class="social__icon">
-                             <use xlink:href="#vk"></use>
-                          </svg>
-                       </a>
-                       <a class="social__item" href="#" target="_blank">
-                          <svg class="social__icon">
-                             <use xlink:href="#youtube"></use>
-                          </svg>
-                       </a>
-                       <a class="social__item" href="#" target="_blank">
-                          <svg class="social__icon">
-                             <use xlink:href="#linkedin"></use>
-                          </svg>
-                       </a>
-
-                    </div>
-
-                 </div>
-              </div>
-           </div>
-           
-           <div class="footer__block2">
-              <div class="footer__block_title">Quick Links</div>
-              <div class="footer__block_inner">
-                 <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">Faq</a></li>
-                    <li><a href="#">Insurance</a></li>
-                    <li><a href="#">Contact us</a></li>
-                 </ul>
-              </div>
-           </div>
-
-           <div class="footer__block3">
-              <div class="footer__block_title">Our Services</div>
-              <div class="footer__block_inner">
-                 <div class="footer__block_inner">
-                    <ul>
-                       <li><a href="#">Work Injuries</a></li>
-                       <li><a href="#">Sport Injuries</a></li>
-                       <li><a href="#">Cold Laser</a></li>
-                       <li><a href="#">Therapy</a></li>
-                       <li><a href="#">Massage Ther</a></li>
-                       <li><a href="#">Chiropratic Therapi</a></li>
-                    </ul>
-                 </div>
-              </div>
-           </div>
-           
-           <!-- form -->
-           <div class="footer__block4">
-              <div class="footer__block_title">Enquiry Form</div>
-              <div class="footer__block_inner">
-                 <form>
-                    <input name="username" type="text" placeholder="Name" class="form --form__name">
-                    <input name="userphone" type="tel" placeholder="Phone" class="form --form__tel">
-                    <textarea name="usermessage" maxlength="1000" placeholder="Message"
-                       class="form --form__message"></textarea>
-                    <input type="submit" class="footer__btn" value="SUBMIT">
-                 </form>
-              </div>
-           </div>
-
-        </div>
-     </div>
-  </footer>
-
-  <!-- end -->
-  <div id="end">
-     <div class="container">
-        <p class="end__text"> © 2020. | by Oksenyuk Andrey</p>
-     </div>
-  </div>
+   <!-- end -->
+   <div id="end">
+      <div class="container">
+         <p class="end__text"> © 2020. | by Oksenyuk Andrey</p>
+      </div>
+   </div>
 
 
 
-  <!-- galereya -->
-  <script src="galereya/js/lightgallery.min.js"></script>
-
-  <script src="JavaScript/javascript.js"></script>
+   <!-- galereya -->
+   <script src="library/galereya/js/lightgallery.min.js"></script>
+   <script src="script/index.js"></script>
 </body>
 
 </html>
